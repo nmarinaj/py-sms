@@ -1,15 +1,19 @@
+import datetime
 def response_handler(body):
-    message = ""
-    if body == 'start':
-        message = "You are in a boring class.  Do you 'take a nap' or 'take notes'?"
-    elif body == 'take a nap':
-        message = "You fall asleep forever...and ever...and ever.  Do you want to 'start' over?"
-    elif body == 'take notes':
-        message = "You furiously take notes as the teacher drones on.  Your friend taps you on the shoulder.  Do you 'turn around' or keep looking at your 'notes'"
-    elif body == 'turn around':
-        message = "You turn around, only to find that you have just stared into the eyes of a basilisk!  Oh well...do you want to 'start' over?"
-    elif body == 'notes':
-        message = "Unfortunately, this game is incomplete...please come back later for more!  Do you want to 'start' over?"
-    else:
-        message = "Invalid command.  Text 'start' to restart the game.  Or text 'pic please' for a random picture"
-    return message
+    
+    x = datetime.datetime.today().weekday() 
+
+    if x == 0:
+        return "Happy Monday! You're 4 days away from Friday. Faith is taking the first step even when you don't see the whole staircase." , "http://7-themes.com/data_images/out/9/6796558-gorgeous-cave-wallpaper.jpg"
+    if x == 1:
+        return "Happy Tuesday! The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy." , "http://7-themes.com/data_images/out/78/7038133-beautiful-eiffel-pictures.jpg"
+    if x == 2:  
+        return "Happy Wednesday! Hump Dayyy! ;) " , "http://7-themes.com/data_images/out/71/7014545-butterflies-hd.jpg"
+    if x == 3:
+        return "Happy Thursday! Almost there!" , "http://images.nationalgeographic.com/wpf/media-live/photos/000/936/cache/bear-road-denali_93621_990x742.jpg"
+    if x == 4:
+        return "Friday, I've seen the promised land! I may not get there with you, but I want you to know tonight that we as a people will get to the promised land. -MLK" , "http://science-all.com/image.php?pic=/images/wallpapers/happy-image/happy-image-25.jpg"
+    if x == 5:
+        return "Happy Saturday, more like Sadder Day. We're gonna miss you guys :( "
+    if x == 6:
+        return "Happy Sunday, I look to a day when people will not be judged by the color of their skin, but by the content of their character."
