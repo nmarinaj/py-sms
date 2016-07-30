@@ -14,6 +14,6 @@ def response_handler(body):
     if x == 4:
         return "Friday, I've seen the promised land! I may not get there with you, but I want you to know tonight that we as a people will get to the promised land. -MLK" , "http://science-all.com/image.php?pic=/images/wallpapers/happy-image/happy-image-25.jpg"
     if x == 5:
-        return "Happy Saturday, more like Sadder Day. We're gonna miss you guys :( "
+        return "Happy Saturday, more like Sadder Day. We're gonna miss you guys :( ", "notalink"
     if x == 6:
-        return "Happy Sunday, I look to a day when people will not be judged by the color of their skin, but by the content of their character."
+        return "Happy Sunday, I look to a day when people will not be judged by the color of their skin, but by the content of their character.", "notalink"
