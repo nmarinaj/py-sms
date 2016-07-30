@@ -12,15 +12,15 @@ def receive_sms():
     body = body.lower().strip()  # removes spaces and converts all to lower case
 
     message, photo = response_handler(body)
-    resp = twilio.twiml.Response()
-    with resp.message(message) as m:
-        m.media(photo)
-    return str(resp)
- 
     # resp = twilio.twiml.Response()
-    # resp.message(message)
-
+    # with resp.message(message) as m:
+    #     m.media(photo)
     # return str(resp)
+ 
+    resp = twilio.twiml.Response()
+    resp.message(message)
+
+    return str(resp)
 
 if __name__ == "__main__":
 	# Bind to PORT if defined, otherwise default to 5000.  For Heroku deployment
